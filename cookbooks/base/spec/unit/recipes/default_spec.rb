@@ -7,10 +7,12 @@
 require "spec_helper"
 
 describe "base::default" do
-  INCLUDED_RECIPES = %w(apt base::packages)
+  INCLUDED_RECIPES = %w(apt base::packages base::chruby)
 
   let(:chef_run) do
     runner = ChefSpec::ServerRunner.new
+
+    stub_command("git --version >/dev/null").and_return("2.4.4")
     runner.converge(described_recipe)
   end
 
