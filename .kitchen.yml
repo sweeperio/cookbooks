@@ -1,0 +1,21 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: ubuntu-14.04
+
+suites:
+  - name: server_base
+    run_list:
+      - role[server_base]
+    attributes:
+      packages:
+        - curl
+      chruby:
+        default: 2.2.2
+        rubies:
+          2.2.2: true
