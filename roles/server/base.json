@@ -4,16 +4,17 @@
   "chef_type": "role",
   "json_class": "Chef::Role",
   "run_list": [
-    "recipe[base]",
+    "recipe[base]"
   ],
   "default_attributes": {
     "packages": ["curl"],
     "chruby": {
       "auto_switch": true,
       "rubies": {
+        "1.9.3-p392": false,
         "2.2.2": true
       },
       "default": "2.2.2"
-    },
+    }
   }
 }
