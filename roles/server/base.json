@@ -1,0 +1,19 @@
+{
+  "name": "server--base",
+  "description": "base role for servers",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "run_list": [
+    "recipe[base]",
+  ],
+  "default_attributes": {
+    "packages": ["curl"],
+    "chruby": {
+      "auto_switch": true,
+      "rubies": {
+        "2.2.2": true
+      },
+      "default": "2.2.2"
+    },
+  }
+}
