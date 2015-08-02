@@ -19,3 +19,7 @@ suites:
         default: 2.2.2
         rubies:
           2.2.2: true
+  - name: apps_dude
+    run_list:
+      - role[apps_dude]
+    attributes:
