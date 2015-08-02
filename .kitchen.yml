@@ -11,7 +11,7 @@ platforms:
 suites:
   - name: server_base
     run_list:
-      - role[server_base]
+      - role[server--base]
     attributes:
       packages:
         - curl
@@ -21,5 +21,5 @@ suites:
           2.2.2: true
   - name: apps_dude
     run_list:
-      - role[apps_dude]
+      - role[apps--dude]
     attributes:
