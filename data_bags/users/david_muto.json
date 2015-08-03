@@ -1,0 +1,27 @@
+{
+  "id": "david_muto",
+  "username": {
+    "encrypted_data": "GqJJ5rH9S3tR7tFi70Dr1L2EEnCiqkJNS9xU7sk17o4=\n",
+    "iv": "vumCCpuH7I2M7yr4Xnw3eA==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "comment": {
+    "encrypted_data": "kdVi00ArjcRXC0x95qN2ZTVT27bP63crWSSjtVz4ajI=\n",
+    "iv": "wFitUsCuN3tDcVI7QU/a7A==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "home": {
+    "encrypted_data": "uptVy0GQS7+encKI2PP5l5JdckiiQl3sFggDB+ixhi2sIz8Xl8APaIBMKPOd\nx0ms\n",
+    "iv": "Jsats3YoI5lBW8qam5Fp5A==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "ssh_keys": {
+    "encrypted_data": "ZkHjWQGnQZ8T6yGWauQPsdB+1X/gawGK/hNoiZjd6NF6T/Rs66jYeGzyDzbZ\nlBQ2PQlHSn5z6Tot9TD2jpsGGw3XWVn+0M15h/msOSjIb2tPnvNx9wmMFDxL\n0U6hlRam5uDR7U9leNys57RSzPBJS5YV/WHzZ+44mmBo+AoL4dcmYOgg3ETz\n8Gaa3nRT20EMfR96cRibyBJ/9D5LBIf6kjsm3nrjvwtdsPbrAWWjnlE3/rIv\nMk67AJwj/q/bxkD6Q1eWGAiZLjNWlIn+R8g9NedAOB1+5J2zFMexPcz4bo3A\n4JQLF5e5Mx89RklKiM4ZwwpDmIeERqjY4frW0jWCT+6nB9wpZAJkfF7XQsC6\n6KOaOhsnwwA4Rs/mZsB1ehy179gy23Uwn3bz14XXTyLV7MGyGdYfDh5VgGUq\n2Mp8lu3Pxd6q2mqm5MX+usX7rX+LpxxLRDL/VzJav6KEzoFYv6f4StDhVPRf\n32hlvIKanJjE95ILSHtbUdToi2Sj3iTa+S7AkA40SG0GbAunmcjHU5uyEfpS\npunvpREyvb9gntcdHt/BnhK6rcoFGcIKTdSj\n",
+    "iv": "WDTD/HR8T205s92VzVRz7A==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}

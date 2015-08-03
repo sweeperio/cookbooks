@@ -4,9 +4,11 @@
   "chef_type": "role",
   "json_class": "Chef::Role",
   "run_list": [
-    "recipe[base]"
+    "recipe[base]",
+    "recipe[user::data_bag]"
   ],
   "default_attributes": {
+    "users": ["david_muto", "deploy"],
     "packages": ["curl"],
     "chruby": {
       "auto_switch": true,
