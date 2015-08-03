@@ -1,26 +1,32 @@
 {
   "id": "david_muto",
   "username": {
-    "encrypted_data": "GqJJ5rH9S3tR7tFi70Dr1L2EEnCiqkJNS9xU7sk17o4=\n",
-    "iv": "vumCCpuH7I2M7yr4Xnw3eA==\n",
+    "encrypted_data": "w6/a8bS7xoqckcDlum3clmnkiDLqniyyzVzD58rNh0A=\n",
+    "iv": "Y3sBwN17RI2q4nm8vGZPPA==\n",
     "version": 1,
     "cipher": "aes-256-cbc"
   },
   "comment": {
-    "encrypted_data": "kdVi00ArjcRXC0x95qN2ZTVT27bP63crWSSjtVz4ajI=\n",
-    "iv": "wFitUsCuN3tDcVI7QU/a7A==\n",
+    "encrypted_data": "rNUBviNNtpP2tFyGewhTA4JFdkuFo0QuIpdxvggqzpo=\n",
+    "iv": "81jG/wIf8eMqh7C/36HQSQ==\n",
     "version": 1,
     "cipher": "aes-256-cbc"
   },
   "home": {
-    "encrypted_data": "uptVy0GQS7+encKI2PP5l5JdckiiQl3sFggDB+ixhi2sIz8Xl8APaIBMKPOd\nx0ms\n",
-    "iv": "Jsats3YoI5lBW8qam5Fp5A==\n",
+    "encrypted_data": "V12btLD20ynYA9w5KCaiyAD8YN4/RLPomvY7dKieHqMp3YABYk+Y0Cf7eJ93\nfsrT\n",
+    "iv": "MobDTnxjB8s4sQ32bnUbbw==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "groups": {
+    "encrypted_data": "C5s5VGP0QfarQEBeykWdMsBEXQhE1sjXm1NfMq8fpoKpY5Kx7NiMxsiQ9CQ5\n70mE\n",
+    "iv": "3Wj1r947Hw5oGQKLjuARFg==\n",
     "version": 1,
     "cipher": "aes-256-cbc"
   },
   "ssh_keys": {
-    "encrypted_data": "ZkHjWQGnQZ8T6yGWauQPsdB+1X/gawGK/hNoiZjd6NF6T/Rs66jYeGzyDzbZ\nlBQ2PQlHSn5z6Tot9TD2jpsGGw3XWVn+0M15h/msOSjIb2tPnvNx9wmMFDxL\n0U6hlRam5uDR7U9leNys57RSzPBJS5YV/WHzZ+44mmBo+AoL4dcmYOgg3ETz\n8Gaa3nRT20EMfR96cRibyBJ/9D5LBIf6kjsm3nrjvwtdsPbrAWWjnlE3/rIv\nMk67AJwj/q/bxkD6Q1eWGAiZLjNWlIn+R8g9NedAOB1+5J2zFMexPcz4bo3A\n4JQLF5e5Mx89RklKiM4ZwwpDmIeERqjY4frW0jWCT+6nB9wpZAJkfF7XQsC6\n6KOaOhsnwwA4Rs/mZsB1ehy179gy23Uwn3bz14XXTyLV7MGyGdYfDh5VgGUq\n2Mp8lu3Pxd6q2mqm5MX+usX7rX+LpxxLRDL/VzJav6KEzoFYv6f4StDhVPRf\n32hlvIKanJjE95ILSHtbUdToi2Sj3iTa+S7AkA40SG0GbAunmcjHU5uyEfpS\npunvpREyvb9gntcdHt/BnhK6rcoFGcIKTdSj\n",
-    "iv": "WDTD/HR8T205s92VzVRz7A==\n",
+    "encrypted_data": "qjbEQitYRgZKasyHRBTJt3PiJ+veh3gkdX70cIydzfSODqcPWe8KDcUX++zf\nxwX+2V1/SzrYM3q6xvvw/wYXLTYfeY6xoWqd5Adab4XxOuKk2P6fU+9F5ckA\nmbPPFTqllmpBT0A9h3T+wwEyCUQF5EOn5/bdZjQ23cMViuXJCf8ziwU2S44Y\n3QK3J0lXrGPMYt9zS2Y0dnZWJbDy8UGsbJkk5cfyz/BMi5DfoSDn3WVUWCzj\nDSv4N1KHBWfiuogy51gRiMQj2tozJ8+Rsxv49/pYgKPoqO79PNOGdYWcWaoz\nqxhxZeFRGEFpVQr0lRrDFGvJKpxYSaa2fWc/s67X9XFIZPotpHv3B52gGiDr\n7EpXh2Sz+dMsJTW88tOBleJKlx1LowzpzMAz53bRg/RXNpCHtp2R54a9UT4z\no84Yot9yxHiJmntttq2a95i0V8I0PK/VyHiL3Te5jxMyGjr37StzwfYY0U/K\n10OC+AA69ZfP7L3tb6PdJAtp2fxYEWNkLRANs4i2y9p7Xsd4o4/LJTtLE+Fw\nnVKpNMu7UuaJ161i3KVOfeZkA+YpUDAH8nmP\n",
+    "iv": "YCNJr0mDwJb5CB6DcXRrzA==\n",
     "version": 1,
     "cipher": "aes-256-cbc"
   }

@@ -7,4 +7,8 @@ describe "users" do
       it { should belong_to_group(user_account) }
     end
   end
+
+  describe user("pseudomuto") do
+    it { should belong_to_group("sudoers") }
+  end
 end

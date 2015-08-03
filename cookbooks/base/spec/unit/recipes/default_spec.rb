@@ -21,4 +21,8 @@ describe "base::default" do
       expect(chef_run).to include_recipe(recipe)
     end
   end
+
+  it "creates the sudoers group" do
+    expect(chef_run).to create_group("sudoers")
+  end
 end
