@@ -22,7 +22,30 @@ The config file, `.chef/knife.rb` is a repository specific configuration file fo
 
 http://docs.chef.io/knife.html
 
-Next Steps
+Data Bags
 ==========
 
-Read the README file in each of the subdirectories for more information about what goes in those directories.
+Normally chef works by communicating directly with the server for data bags. However, I'd prefer to store these in
+json files within the repo.
+
+I've added `knife data bag encrypt` and `knife data bag decrypt` as knife plugins in this repo. Both of these commands
+use the `encrypted_data_bag_secret` setting defined in _.chef/knife.rb_ to handle encryption.
+
+## Creating a New Data Bag
+
+* Create a json file for the item (e.g. _data_bags/[BAG_NAME]/[ITEM].json_)
+* Add any plain text entries needed
+* Run `knife data bag encrypt [BAG_NAME] [ITEM] -w` (The `-w` means write to disk)
+* `knife data bag from file data_bags/[BAG_NAME]/[ITEM].json`
+
+## Editing a Data Bag
+
+* Decrypt the file with `knife data bag decrypt [BAG_NAME] [ITEM] -w`
+* Update the JSON file as needed
+* Encrypt the file `knife data bag encrypt [BAG_NAME] [ITEM] -w`
+* `knife data bag from file data_bags/[BAG_NAME]/[ITEM].json`
+
+## Deleting a Data Bag
+
+* `git rm data_bags/[BAG_NAME]/[ITEM].json`
+* `knife data bag delete BAG_NAME ITEM`
