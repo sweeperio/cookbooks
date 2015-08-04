@@ -34,4 +34,12 @@ describe "base::chruby" do
   it "doesn't attempt to install bundler for uninstalled rubies" do
     expect(chef_run).to_not run_execute("install bundler for ruby 1.9.3-p392")
   end
+
+  it "installs ejson for all installed rubies" do
+    expect(chef_run).to run_execute("install ejson for ruby 2.2.2")
+  end
+
+  it "doesn't attempt to install ejson for uninstalled rubies" do
+    expect(chef_run).to_not run_execute("install ejson for ruby 1.9.3-p392")
+  end
 end

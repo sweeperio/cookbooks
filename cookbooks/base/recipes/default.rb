@@ -10,3 +10,9 @@ include_recipe "base::packages"
 include_recipe "base::chruby"
 
 group "sudoers"
+
+directory "/opt/ejson/keys" do
+  owner "deploy"
+  group "deploy"
+  mode 0666
+end

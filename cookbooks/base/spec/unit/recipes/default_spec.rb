@@ -25,4 +25,12 @@ describe "base::default" do
   it "creates the sudoers group" do
     expect(chef_run).to create_group("sudoers")
   end
+
+  it "creates the ejson folder" do
+    expect(chef_run).to create_directory("/opt/ejson/keys").with(
+      mode: 0666,
+      owner: "deploy",
+      group: "deploy"
+    )
+  end
 end

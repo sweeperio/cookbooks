@@ -19,6 +19,10 @@ describe "base::chruby" do
     its(:stdout) { should eq("/opt/rubies/2.2.2/bin/bundle\n") }
   end
 
+  describe command("which ejson") do
+    its(:stdout) { should eq("/opt/rubies/2.2.2/bin/ejson\n") }
+  end
+
   describe command("ruby -v") do
     its(:exit_status) { should eq(0) }
     its(:stdout) { should match(/^ruby 2\.2\.2/) }
