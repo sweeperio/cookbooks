@@ -7,7 +7,7 @@
 require "spec_helper"
 
 describe "base::default" do
-  INCLUDED_RECIPES = %w(apt base::packages base::chruby)
+  INCLUDED_RECIPES = %w(apt base::packages base::chruby base::apps)
 
   let(:chef_run) do
     runner = ChefSpec::ServerRunner.new
@@ -29,6 +29,7 @@ describe "base::default" do
   it "creates the ejson folder" do
     expect(chef_run).to create_directory("/opt/ejson/keys").with(
       mode: 0666,
+      recursive: true,
       owner: "deploy",
       group: "deploy"
     )

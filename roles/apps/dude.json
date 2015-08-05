@@ -8,5 +8,10 @@
     "recipe[redisio::enable]"
   ],
   "default_attributes": {
+    "apps": {
+      "dude": {
+        "target": "/u/apps/dude"
+      }
+    }
   }
 }

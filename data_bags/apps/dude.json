@@ -1,0 +1,27 @@
+{
+  "id": "dude",
+  "name": {
+    "encrypted_data": "U/koNy+ZqV3/L5Ae7M2poLyfucDmdVR26hYx9gmBjAE=\n",
+    "iv": "v+OU96k6r/qlTkmiQ63mNw==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "description": {
+    "encrypted_data": "VnPF7CIoqgzhfTu/KeP4B5QRYVNwtCyEc3h+Qif3DJec8+PlCThpV74XZyyu\nYl3G\n",
+    "iv": "DJ9zR0fumGUtV4z9TH+ULw==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "repository": {
+    "encrypted_data": "qj1Et1KkGLJ1rL/CTW8roSeIfB/gV7pxS7xcIcST+ZMaf/PnJOoUhNK8SF7x\nmDHRXOY94MYCdxRJwhyKEEDhYQ==\n",
+    "iv": "F3Na7ZYr3H985TV4RA0h4w==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "ejson_keys": {
+    "encrypted_data": "oY4wpGWlcLtfEQ4qxe601N7NGNvNviZnI9dbovAIB1w=\n",
+    "iv": "LW4Ieq3KwSqdD7IbccAZDw==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}
