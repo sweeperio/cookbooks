@@ -11,18 +11,18 @@ directory "/opt/ejson/keys" do
   recursive true
   owner deploy_account
   group deploy_account
-  mode 660
+  mode "0660"
 end
 
-directory "/code" do
+directory "/var/code" do
   recursive true
   owner deploy_account
   group deploy_account
-  mode 700
+  mode "0770"
 end
 
 node["apps"].each do |app_name|
-  app = Chef::EncryptedDataBagItem.load("apps", app_name)
+  app = Chef::EncryptedDataBagItem.load("apps", app_name).to_hash
   app.fetch("ejson_keys", []).each do |key|
     data = ejson_keys[key]
 
@@ -30,7 +30,7 @@ node["apps"].each do |app_name|
       content data["private"]
       owner deploy_account
       group deploy_account
-      mode 440
+      mode "0440"
     end
   end
 end

@@ -6,7 +6,7 @@
 
 require "spec_helper"
 
-describe "dude::ejson" do
+describe "dude::apps" do
   before do
     expect(Chef::EncryptedDataBagItem).to receive(:load).with("ejson", "keys").and_return(
       "id" => "keys",
@@ -34,7 +34,7 @@ describe "dude::ejson" do
       recursive: true,
       owner: "deploy",
       group: "deploy",
-      mode: 660
+      mode: "0660"
     )
   end
 
@@ -43,10 +43,11 @@ describe "dude::ejson" do
       "id" => "dude"
     )
 
-    expect(chef_run).to create_directory("/code").with(
+    expect(chef_run).to create_directory("/var/code").with(
       owner: "deploy",
       group: "deploy",
-      mode: 700
+      mode: "0770",
+      recursive: true
     )
   end
 
@@ -63,7 +64,7 @@ describe "dude::ejson" do
         content: "private_key",
         owner: "deploy",
         group: "deploy",
-        mode: 440
+        mode: "0440"
       )
     end
   end

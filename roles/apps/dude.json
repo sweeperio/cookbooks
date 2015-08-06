@@ -4,15 +4,11 @@
   "chef_type": "Chef::Role",
   "run_list": [
     "role[server--base]",
-    "recipe[dude"],
+    "recipe[dude]",
     "recipe[redisio]",
     "recipe[redisio::enable]"
   ],
   "default_attributes": {
-    "apps": {
-      "dude": {
-        "target": "/u/apps/dude"
-      }
-    }
+    "apps": ["dude"]
   }
 }

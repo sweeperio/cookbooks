@@ -16,7 +16,7 @@ describe "dude::default" do
     runner.converge(described_recipe)
   end
 
-  %w(dude::ejson).each do |recipe|
+  %w(dude::apps).each do |recipe|
     it "should include the #{recipe} recipe" do
       expect(chef_run).to include_recipe(recipe)
     end
