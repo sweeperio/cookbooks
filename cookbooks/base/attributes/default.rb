@@ -1,2 +1,1 @@
-default["apps"] = []
 default["packages"] = []

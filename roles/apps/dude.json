@@ -4,6 +4,7 @@
   "chef_type": "Chef::Role",
   "run_list": [
     "role[server--base]",
+    "recipe[dude"],
     "recipe[redisio]",
     "recipe[redisio::enable]"
   ],
