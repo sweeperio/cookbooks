@@ -15,11 +15,10 @@ directory "/opt/ejson/keys" do
   mode "0660"
 end
 
-directory "/var/code/.ssh" do
-  recursive true
+directory "/home/#{deploy_account}/.ssh" do
   owner deploy_account
   group deploy_account
-  mode "0770"
+  mode "0700"
 end
 
 node["apps"].each do |app_name|
@@ -30,7 +29,7 @@ node["apps"].each do |app_name|
     provider Chef::Provider::DeployKeyGithub
     action :add
     credentials(token: deploy_tokens["sweeper-deploy"])
-    path "/var/code/.ssh"
+    path "/home/#{deploy_account}/.ssh"
     repo repo
     owner deploy_account
     group deploy_account

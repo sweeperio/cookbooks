@@ -6,31 +6,32 @@ describe "apps" do
     it { should be_directory }
     it { should be_owned_by("deploy") }
     it { should be_grouped_into("deploy") }
-    it { should be_mode("0660") }
+    it { should be_mode(660) }
   end
 
-  describe command("ls -al /opt/ejson/keys | wc -l") do
-    its(:stdout) { should contain("1\n") }
+  describe command("ls -1 /opt/ejson/keys | wc -l") do
+    its(:stdout) { should eq("1\n") }
   end
 
-  describe file("/var/code") do
+  describe file("/home/deploy/.ssh") do
     it { should exist }
     it { should be_directory }
     it { should be_owned_by("deploy") }
     it { should be_grouped_into("deploy") }
-    it { should be_mode("0770") }
+    it { should be_mode(700) }
   end
 
-  describe file("/var/code/.ssh/dude_deploy_key") do
+  describe file("/home/deploy/.ssh/dude_deploy_key") do
     it { should exist }
     it { should be_owned_by("deploy") }
     it { should be_grouped_into("deploy") }
-    it { should be_mode("0640") }
+    it { should be_mode(640) }
   end
 
-  describe file("/var/code/.ssh/dude_deploy_key.pub") do
+  describe file("/home/deploy/.ssh/dude_deploy_key.pub") do
     it { should exist }
     it { should be_owned_by("deploy") }
     it { should be_grouped_into("deploy") }
-    it { should be_mode("0640") }
+    it { should be_mode(640) }
+  end
 end

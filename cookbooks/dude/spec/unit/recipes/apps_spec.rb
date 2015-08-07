@@ -47,18 +47,17 @@ describe "dude::apps" do
       )
     end
 
-    it "creates the source directory" do
-      expect(chef_run).to create_directory("/var/code").with(
+    it "creates the ssh directory" do
+      expect(chef_run).to create_directory("/home/deploy/.ssh").with(
         owner: "deploy",
         group: "deploy",
-        mode: "0770",
-        recursive: true
+        mode: "0700"
       )
     end
 
     it "creates a deploy key for the dude repo" do
       expect(chef_run).to add_deploy_key("dude_deploy_key").with(
-        path: "/var/code/.ssh",
+        path: "/home/deploy/.ssh",
         credentials: { token: "12345abcdefghijklmnopqrstuvwxyz" },
         repo: "sweeperio/dude",
         owner: "deploy",
