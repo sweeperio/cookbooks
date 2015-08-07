@@ -8,6 +8,11 @@ require "spec_helper"
 
 describe "dude::apps" do
   before do
+    expect(Chef::EncryptedDataBagItem).to receive(:load).with("tokens", "github").and_return(
+      "id"             => "github",
+      "sweeper-deploy" => "12345abcdefghijklmnopqrstuvwxyz"
+    )
+
     expect(Chef::EncryptedDataBagItem).to receive(:load).with("ejson", "keys").and_return(
       "id" => "keys",
       "dude" => {
@@ -25,37 +30,50 @@ describe "dude::apps" do
     runner.converge(described_recipe)
   end
 
-  it "creates the ejson keys directory" do
-    expect(Chef::EncryptedDataBagItem).to receive(:load).with("apps", "dude").and_return(
-      "id" => "dude"
-    )
+  context "with app definition" do
+    before do
+      expect(Chef::EncryptedDataBagItem).to receive(:load).with("apps", "dude").and_return(
+        "id"          => "dude",
+        "github_repo" => "sweeperio/dude"
+      )
+    end
 
-    expect(chef_run).to create_directory("/opt/ejson/keys").with(
-      recursive: true,
-      owner: "deploy",
-      group: "deploy",
-      mode: "0660"
-    )
-  end
+    it "creates the ejson keys directory" do
+      expect(chef_run).to create_directory("/opt/ejson/keys").with(
+        recursive: true,
+        owner: "deploy",
+        group: "deploy",
+        mode: "0660"
+      )
+    end
 
-  it "creates the source directory" do
-    expect(Chef::EncryptedDataBagItem).to receive(:load).with("apps", "dude").and_return(
-      "id" => "dude"
-    )
+    it "creates the source directory" do
+      expect(chef_run).to create_directory("/var/code").with(
+        owner: "deploy",
+        group: "deploy",
+        mode: "0770",
+        recursive: true
+      )
+    end
 
-    expect(chef_run).to create_directory("/var/code").with(
-      owner: "deploy",
-      group: "deploy",
-      mode: "0770",
-      recursive: true
-    )
+    it "creates a deploy key for the dude repo" do
+      expect(chef_run).to add_deploy_key("dude_deploy_key").with(
+        path: "/var/code/.ssh",
+        credentials: { token: "12345abcdefghijklmnopqrstuvwxyz" },
+        repo: "sweeperio/dude",
+        owner: "deploy",
+        group: "deploy",
+        mode: "0640"
+      )
+    end
   end
 
   context "when ejson_keys are defined" do
     before do
       expect(Chef::EncryptedDataBagItem).to receive(:load).with("apps", "dude").and_return(
-        "id" => "dude",
-        "ejson_keys" => ["dude"]
+        "id"          => "dude",
+        "github_repo" => "sweeperio/dude",
+        "ejson_keys"  => ["dude"]
       )
     end
 
@@ -72,7 +90,8 @@ describe "dude::apps" do
   context "when ejson_keys are not defined" do
     before do
       expect(Chef::EncryptedDataBagItem).to receive(:load).with("apps", "dude").and_return(
-        "id" => "dude"
+        "id"          => "dude",
+        "github_repo" => "sweeperio/dude"
       )
     end
 

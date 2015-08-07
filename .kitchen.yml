@@ -24,3 +24,7 @@ suites:
     run_list:
       - role[apps--dude]
     attributes:
+      authorization:
+        sudo:
+          users:
+            - vagrant

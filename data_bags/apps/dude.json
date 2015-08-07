@@ -1,27 +1,31 @@
 {
   "id": "dude",
   "name": {
-    "encrypted_data": "U/koNy+ZqV3/L5Ae7M2poLyfucDmdVR26hYx9gmBjAE=\n",
-    "iv": "v+OU96k6r/qlTkmiQ63mNw==\n",
-    "version": 1,
+    "encrypted_data": "lbcy4pxd9rXvkznmTVYJyc0akuUhx/s7rJ5oNAP3JIg=\n",
+    "hmac": "mByP20OkOjU8tVKcn+HnDyI1DVz5omLFlsmTYvOnM4U=\n",
+    "iv": "Yw+6PZpLEnXEY9nJZzWPUA==\n",
+    "version": 2,
     "cipher": "aes-256-cbc"
   },
   "description": {
-    "encrypted_data": "VnPF7CIoqgzhfTu/KeP4B5QRYVNwtCyEc3h+Qif3DJec8+PlCThpV74XZyyu\nYl3G\n",
-    "iv": "DJ9zR0fumGUtV4z9TH+ULw==\n",
-    "version": 1,
+    "encrypted_data": "xL5fCDLdAFH+cElX9/SNIHWeejnlxXwFSvc4pOk6Y4Y0ba9dXb3DdulfYL4h\nZefI\n",
+    "hmac": "9SBHtUJ0MNlyd3dROGCr8s1Qf2yBMOUfMFHhNl3MyTA=\n",
+    "iv": "D9wIJPdkVkj1CEtjRxBryg==\n",
+    "version": 2,
     "cipher": "aes-256-cbc"
   },
-  "repository": {
-    "encrypted_data": "qj1Et1KkGLJ1rL/CTW8roSeIfB/gV7pxS7xcIcST+ZMaf/PnJOoUhNK8SF7x\nmDHRXOY94MYCdxRJwhyKEEDhYQ==\n",
-    "iv": "F3Na7ZYr3H985TV4RA0h4w==\n",
-    "version": 1,
+  "github_repo": {
+    "encrypted_data": "hR8Ix4wBJ64b7ITqxYF2BmOqLj6Bb3NrxsrbRs9d+bxvZtsRHtopEi1TVXW7\nK6Z7\n",
+    "hmac": "mJCNFJfqe5IhARwBc48hh/3QJ7o+m363ln0emxFLe1I=\n",
+    "iv": "xg+DdjRVPY6Ps8+OS7RX5g==\n",
+    "version": 2,
     "cipher": "aes-256-cbc"
   },
   "ejson_keys": {
-    "encrypted_data": "oY4wpGWlcLtfEQ4qxe601N7NGNvNviZnI9dbovAIB1w=\n",
-    "iv": "LW4Ieq3KwSqdD7IbccAZDw==\n",
-    "version": 1,
+    "encrypted_data": "iz8tqsBl2D3k4rkaVQDdYeaPjbKOL7HqYL8YrJcSEOQ=\n",
+    "hmac": "nKwHEl+XIJwgPOmZ/QVMZ4wJ5+Wua1ZOdpc64R6iCxo=\n",
+    "iv": "xEcp4dA+D27QaXALkDUL/A==\n",
+    "version": 2,
     "cipher": "aes-256-cbc"
   }
 }

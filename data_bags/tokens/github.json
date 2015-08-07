@@ -1,0 +1,10 @@
+{
+  "id": "github",
+  "sweeper-deploy": {
+    "encrypted_data": "HD+UM/qVQ8bh1JdgijZUuQS/YVov3fEEwWknnFKeTrgaqfRMfss/rHMpqhn0\nop5fdGobbHLqY6h4GG6w19QqPg==\n",
+    "hmac": "BsP2RgaQ/S2h1VIekoHf/jJX4UkcqrABYFM/3S4MQQ8=\n",
+    "iv": "HJye0pe+p6Wx0Dm9LoGZEw==\n",
+    "version": 2,
+    "cipher": "aes-256-cbc"
+  }
+}
