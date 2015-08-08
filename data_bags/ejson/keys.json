@@ -1,9 +1,10 @@
 {
   "id": "keys",
   "dude": {
-    "encrypted_data": "gfqcKpAz+kVE9XJCg9yS8jxZo9IZGdWuIfO0OkSziqPig8zpW6RQGHR+QNVq\nLnlASSB4K4ztdnxfaIvBkT9L828PsWEk7Pl1nCMx52XQEyQZXYpsAkLg8ixJ\n7uF2DTGSKD7nN3G5v0lYgC71BYoKud8gvjMQReuJ1xRkLMO6VbZn2d4krGyd\nQYxFyvUyQdQpYcAF0COpGS8FH6UthQ4yfchMl8XFXKMmq0kvH962sCQ=\n",
-    "iv": "fByPHjqQSx1FFfYOUUlsmA==\n",
-    "version": 1,
+    "encrypted_data": "e6nlmlzmn0tghYTZCyryXfQWZFjK5RDytc0umTAEgapwJmoHnUk87w4VAMdR\nvDI4PBEA+Cz0oxEmqAMSo0l9GJSwLqqkx4f6SvagTj5ld37cDq8GJFkiBqFJ\nhuGMSk3c1RFmHtI4yAlj7LHCYSwtI6ffDJ8U7IAAeT2yY7NmiYOYfrZB4wNx\nqK8gxUVzT/+adNswK16BivXx6tU+mTh4NlwnKWlG1FQ0JRDDbStYl1w=\n",
+    "hmac": "JhtCGngF9VWmn6ZV9JjkEL7kOVsOpteREzx5uBwPCHQ=\n",
+    "iv": "2FptNWCuBJRC5VSBL0W6hw==\n",
+    "version": 2,
     "cipher": "aes-256-cbc"
   }
 }
