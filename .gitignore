@@ -7,6 +7,7 @@
 .chef/syntax_check_cache
 .chef/trusted_certs
 .chef/*.rb
+!.chef/knife.example.rb
 .chef/*.pem
 
 .kitchen/
