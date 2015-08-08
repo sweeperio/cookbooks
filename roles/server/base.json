@@ -16,7 +16,7 @@
         "passwordless": true
       }
     },
-    "packages": ["curl"],
+    "packages": ["curl", "ruby-dev"],
     "chruby": {
       "auto_switch": true,
       "rubies": {
