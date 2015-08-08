@@ -1,0 +1,14 @@
+{
+  "name": "apps--dude",
+  "description": "role for nodes running dude",
+  "chef_type": "Chef::Role",
+  "run_list": [
+    "role[server--base]",
+    "recipe[dude]",
+    "recipe[redisio]",
+    "recipe[redisio::enable]"
+  ],
+  "default_attributes": {
+    "apps": ["dude"]
+  }
+}

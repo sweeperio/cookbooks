@@ -4,9 +4,18 @@
   "chef_type": "role",
   "json_class": "Chef::Role",
   "run_list": [
-    "recipe[base]"
+    "recipe[user::data_bag]",
+    "recipe[base]",
+    "recipe[sudo]"
   ],
   "default_attributes": {
+    "users": ["david_muto", "deploy"],
+    "authorization": {
+      "sudo": {
+        "groups": ["sudoers"],
+        "passwordless": true
+      }
+    },
     "packages": ["curl"],
     "chruby": {
       "auto_switch": true,

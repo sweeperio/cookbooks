@@ -4,6 +4,7 @@ driver:
 
 provisioner:
   name: chef_zero
+  encrypted_data_bag_secret_key_path: ".chef/encrypted_data_bag_secret"
 
 platforms:
   - name: ubuntu-14.04
@@ -11,7 +12,7 @@ platforms:
 suites:
   - name: server_base
     run_list:
-      - role[server_base]
+      - role[server--base]
     attributes:
       packages:
         - curl
@@ -19,3 +20,11 @@ suites:
         default: 2.2.2
         rubies:
           2.2.2: true
+  - name: apps_dude
+    run_list:
+      - role[apps--dude]
+    attributes:
+      authorization:
+        sudo:
+          users:
+            - vagrant

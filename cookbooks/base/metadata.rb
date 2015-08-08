@@ -7,4 +7,5 @@ long_description  'Base cookbook for all machines'
 version           '0.1.0'
 
 depends "apt"
+depends "build-essential"
 depends "chruby"

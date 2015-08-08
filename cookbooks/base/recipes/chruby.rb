@@ -13,4 +13,9 @@ node["chruby"]["rubies"].each do |ruby, installed|
     command "/opt/rubies/#{ruby}/bin/gem install bundler"
     not_if { ::File.exists?("/opt/rubies/#{ruby}/bin/bundle") }
   end
+
+  execute "install ejson for ruby #{ruby}" do
+    command "/opt/rubies/#{ruby}/bin/gem install ejson"
+    not_if { ::File.exists?("/opt/rubies/#{ruby}/bin/ejson") }
+  end
 end

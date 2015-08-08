@@ -1,0 +1,10 @@
+{
+  "id": "keys",
+  "dude": {
+    "encrypted_data": "e6nlmlzmn0tghYTZCyryXfQWZFjK5RDytc0umTAEgapwJmoHnUk87w4VAMdR\nvDI4PBEA+Cz0oxEmqAMSo0l9GJSwLqqkx4f6SvagTj5ld37cDq8GJFkiBqFJ\nhuGMSk3c1RFmHtI4yAlj7LHCYSwtI6ffDJ8U7IAAeT2yY7NmiYOYfrZB4wNx\nqK8gxUVzT/+adNswK16BivXx6tU+mTh4NlwnKWlG1FQ0JRDDbStYl1w=\n",
+    "hmac": "JhtCGngF9VWmn6ZV9JjkEL7kOVsOpteREzx5uBwPCHQ=\n",
+    "iv": "2FptNWCuBJRC5VSBL0W6hw==\n",
+    "version": 2,
+    "cipher": "aes-256-cbc"
+  }
+}
