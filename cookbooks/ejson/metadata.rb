@@ -1,0 +1,7 @@
+name             "ejson"
+maintainer       "David Muto"
+maintainer_email "developers@sweeper.io"
+license          "mit"
+description      "Installs/Configures ejson"
+long_description "Installs/Configures ejson"
+version          "0.1.0"
