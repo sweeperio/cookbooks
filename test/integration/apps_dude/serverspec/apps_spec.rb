@@ -21,17 +21,33 @@ describe "apps" do
     it { should be_mode(700) }
   end
 
+  describe file("/home/deploy/repos/dude.sh") do
+    it { should exist }
+    it { should be_file }
+    it { should be_owned_by("deploy") }
+    it { should be_grouped_into("deploy") }
+    it { should be_mode(750) }
+  end
+
+  describe file("/home/deploy/repos/dude") do
+    it { should exist }
+    it { should be_directory }
+    it { should be_owned_by("deploy") }
+    it { should be_grouped_into("deploy") }
+    it { should be_mode(755) }
+  end
+
   describe file("/home/deploy/.ssh/dude_deploy_key") do
     it { should exist }
     it { should be_owned_by("deploy") }
     it { should be_grouped_into("deploy") }
-    it { should be_mode(640) }
+    it { should be_mode(600) }
   end
 
   describe file("/home/deploy/.ssh/dude_deploy_key.pub") do
     it { should exist }
     it { should be_owned_by("deploy") }
     it { should be_grouped_into("deploy") }
-    it { should be_mode(640) }
+    it { should be_mode(600) }
   end
 end

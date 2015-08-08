@@ -21,6 +21,20 @@ directory "/home/#{deploy_account}/.ssh" do
   mode "0700"
 end
 
+execute "add github.com to known_hosts" do
+  command "ssh-keyscan -H github.com >> /home/#{deploy_account}/.ssh/known_hosts"
+  user deploy_account
+  group deploy_account
+  action :nothing
+end
+
+directory "/home/#{deploy_account}/repos" do
+  owner deploy_account
+  group deploy_account
+  mode "0770"
+  notifies :run, "execute[add github.com to known_hosts]", :immediately
+end
+
 node["apps"].each do |app_name|
   app  = Chef::EncryptedDataBagItem.load("apps", app_name).to_hash
   repo = app.fetch("github_repo")
@@ -33,7 +47,24 @@ node["apps"].each do |app_name|
     repo repo
     owner deploy_account
     group deploy_account
-    mode "0640"
+    mode "0600"
+  end
+
+  template "/home/#{deploy_account}/repos/#{app_name}.sh" do
+    source "ssh_wrapper.erb"
+    owner deploy_account
+    group deploy_account
+    mode "0750"
+    variables key: "/home/#{deploy_account}/.ssh/#{app_name}_deploy_key"
+  end
+
+  git "/home/#{deploy_account}/repos/#{app_name}" do
+    action :checkout
+    repository "git@github.com:#{repo}.git"
+    revision "master"
+    ssh_wrapper "/home/#{deploy_account}/repos/#{app_name}.sh"
+    user deploy_account
+    group deploy_account
   end
 
   app.fetch("ejson_keys", []).each do |key|
