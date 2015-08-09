@@ -6,7 +6,8 @@
   "run_list": [
     "recipe[user::data_bag]",
     "recipe[base]",
-    "recipe[sudo]"
+    "recipe[sudo]",
+    "recipe[ejson]"
   ],
   "default_attributes": {
     "users": ["david_muto", "deploy"],

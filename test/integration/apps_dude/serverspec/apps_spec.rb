@@ -6,7 +6,7 @@ describe "apps" do
     it { should be_directory }
     it { should be_owned_by("deploy") }
     it { should be_grouped_into("deploy") }
-    it { should be_mode(660) }
+    it { should be_mode(550) }
   end
 
   describe command("ls -1 /opt/ejson/keys | wc -l") do
