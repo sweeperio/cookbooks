@@ -7,13 +7,13 @@
 require "spec_helper"
 
 describe "dude::default" do
-  before do
-    expect(Chef::EncryptedDataBagItem).to receive(:load).with("ejson", "keys").and_return([])
-    expect(Chef::EncryptedDataBagItem).to receive(:load).with("tokens", "github").and_return([])
-  end
-
   cached(:chef_run) do
-    runner = ChefSpec::ServerRunner.new
+    expect(Chef::EncryptedDataBagItem).to receive(:load).with("tokens", "github").and_return([])
+
+    runner = ChefSpec::ServerRunner.new do |node|
+      node.set["ejson"]["keys"] = {}
+    end
+
     runner.converge(described_recipe)
   end
 

@@ -6,7 +6,8 @@
   "run_list": [
     "recipe[user::data_bag]",
     "recipe[base]",
-    "recipe[sudo]"
+    "recipe[sudo]",
+    "recipe[ejson]"
   ],
   "default_attributes": {
     "users": ["david_muto", "deploy"],
@@ -16,7 +17,7 @@
         "passwordless": true
       }
     },
-    "packages": ["curl"],
+    "packages": ["curl", "ruby-dev", "libssl-dev", "libreadline-dev"],
     "chruby": {
       "auto_switch": true,
       "rubies": {

@@ -9,6 +9,11 @@
     "recipe[redisio::enable]"
   ],
   "default_attributes": {
-    "apps": ["dude"]
+    "apps": ["dude"],
+    "ejson": {
+      "keys": {
+        "add": ["dude"]
+      }
+    }
   }
 }
