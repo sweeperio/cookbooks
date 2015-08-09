@@ -59,30 +59,13 @@ describe "dude::apps" do
     )
   end
 
-  it "creates the repo folder" do
-    expect(chef_run).to create_directory("/home/deploy/repos").with(
-      owner: "deploy",
-      group: "deploy",
-      mode: "0770"
-    )
-  end
-
   it "creates the ssh wrapper file" do
-    expect(chef_run).to create_template("/home/deploy/repos/dude.sh").with(
+    expect(chef_run).to create_template("/home/deploy/.ssh/dude_deploy_key.sh").with(
       source: "ssh_wrapper.erb",
       owner: "deploy",
       group: "deploy",
       mode: "0750",
       variables: { key: "/home/deploy/.ssh/dude_deploy_key" }
-    )
-  end
-
-  it "clones the app's master branch" do
-    expect(chef_run).to checkout_git("/home/deploy/repos/dude").with(
-      repository: "git@github.com:sweeperio/dude.git",
-      revision: "master",
-      user: "deploy",
-      group: "deploy"
     )
   end
 

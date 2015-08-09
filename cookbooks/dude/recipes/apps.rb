@@ -28,13 +28,6 @@ execute "add github.com to known_hosts" do
   action :nothing
 end
 
-directory "/home/#{deploy_account}/repos" do
-  owner deploy_account
-  group deploy_account
-  mode "0770"
-  notifies :run, "execute[add github.com to known_hosts]", :immediately
-end
-
 apps.each do |app|
   name = app.fetch("id")
   repo = app.fetch("github_repo")
@@ -50,7 +43,7 @@ apps.each do |app|
     mode "0600"
   end
 
-  template "/home/#{deploy_account}/repos/#{name}.sh" do
+  template "/home/#{deploy_account}/.ssh/#{name}_deploy_key.sh" do
     source "ssh_wrapper.erb"
     owner deploy_account
     group deploy_account
@@ -58,12 +51,9 @@ apps.each do |app|
     variables key: "/home/#{deploy_account}/.ssh/#{name}_deploy_key"
   end
 
-  git "/home/#{deploy_account}/repos/#{name}" do
-    action :checkout
-    repository "git@github.com:#{repo}.git"
-    revision "master"
-    ssh_wrapper "/home/#{deploy_account}/repos/#{name}.sh"
-    user deploy_account
-    group deploy_account
+  # can remove this after it's been run
+  directory "/home/#{deploy_account}/repos" do
+    action :delete
+    recursive true
   end
 end

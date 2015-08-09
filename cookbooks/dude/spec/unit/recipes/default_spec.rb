@@ -8,6 +8,7 @@ require "spec_helper"
 
 describe "dude::default" do
   cached(:chef_run) do
+    stub_command("grep -q chruby /home/deploy/.bashrc").and_return(true)
     expect(Chef::EncryptedDataBagItem).to receive(:load).with("tokens", "github").and_return([])
 
     runner = ChefSpec::ServerRunner.new do |node|
