@@ -23,4 +23,22 @@ describe "dude::default" do
       expect(chef_run).to include_recipe(recipe)
     end
   end
+
+  it "should create the upstart init file" do
+    expect(chef_run).to create_template("/etc/init/dude.conf").with(
+      source: "dude.conf.erb",
+      owner: "root",
+      group: "root",
+      mode: "0644",
+      variables: { user: "deploy", group: "deploy", cwd: "/home/deploy/apps/dude/current" }
+    )
+  end
+
+  it "should start the dude service" do
+    expect(chef_run).to start_service("dude").with(
+      action: [:enable, :start],
+      provider: Chef::Provider::Service::Upstart,
+      supports: { restart: true, status: true }
+    )
+  end
 end
