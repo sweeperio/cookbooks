@@ -26,6 +26,10 @@ suites:
       - role[dev--base]
     attributes:
       users: david_muto
+      authorization:
+        sudo:
+          users:
+            - vagrant
       chruby:
         default: 2.2.3
         rubies:

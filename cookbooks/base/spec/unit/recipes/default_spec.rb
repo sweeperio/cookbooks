@@ -7,7 +7,7 @@
 require "spec_helper"
 
 describe "base::default" do
-  INCLUDED_RECIPES = %w(apt base::packages base::chruby)
+  INCLUDED_RECIPES = %w(ark apt build-essential base::packages base::git base::chruby)
 
   let(:chef_run) do
     runner = ChefSpec::ServerRunner.new
