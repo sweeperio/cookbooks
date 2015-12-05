@@ -1,0 +1,30 @@
+{
+  "name": "dev--base",
+  "description": "base role for dev machines",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "run_list": [
+    "recipe[user::data_bag]",
+    "recipe[base]",
+    "recipe[sudo]"
+  ],
+  "default_attributes": {
+    "authorization": {
+      "sudo": {
+        "groups": ["sudoers"],
+        "passwordless": true
+      }
+    },
+    "packages": ["curl", "ruby-dev", "libssl-dev", "libreadline-dev", "silversearcher-ag"],
+    "chruby": {
+      "auto_switch": true,
+      "rubies": {
+        "1.9.3-p392": false,
+        "2.1.7": true,
+        "2.2.3": true
+      },
+      "default": "2.2.3"
+    }
+  }
+}
+

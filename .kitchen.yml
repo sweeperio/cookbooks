@@ -20,6 +20,17 @@ suites:
         default: 2.2.2
         rubies:
           2.2.2: true
+
+  - name: dev_base
+    run_list:
+      - role[dev--base]
+    attributes:
+      users: david_muto
+      chruby:
+        default: 2.2.3
+        rubies:
+          2.2.3: true
+
   - name: apps_dude
     run_list:
       - role[apps--dude]
