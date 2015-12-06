@@ -7,14 +7,15 @@
     "recipe[user::data_bag]",
     "recipe[base]",
     "recipe[sudo]",
+    "recipe[fasd]",
     "recipe[golang::packages]",
     "recipe[memcached]",
     "recipe[nodejs]",
     "recipe[phantomjs]",
+    "recipe[postgresql::server]",
     "recipe[redisio]",
     "recipe[redisio::enable]",
-    "recipe[tmux]",
-    "recipe[fasd]"
+    "recipe[tmux]"
   ],
   "default_attributes": {
     "authorization": {
@@ -46,6 +47,21 @@
       "npm_packages": [
         { "name": "coffee-script" },
         { "name": "grunt-cli" }
+      ]
+    },
+    "postgresql": {
+      "config": {
+        "listen_addresses": "*"
+      },
+      "password": {
+        "postgres": "64fc049300cbb7564395edd78403c22c"
+      },
+      "pg_hba": [
+        { "type": "local", "db": "all", "user": "postgres", "addr": "", "method": "ident" },
+        { "type": "local", "db": "all", "user": "all", "addr": "", "method": "ident" },
+        { "type": "host", "db": "all", "user": "all", "addr": "127.0.0.1/32", "method": "md5" },
+        { "type": "host", "db": "all", "user": "all", "addr": "::1/128", "method": "md5" },
+        { "type": "host", "db": "all", "user": "all", "addr": "192.168.0.0/16", "method": "trust" }
       ]
     },
     "tmux": {
