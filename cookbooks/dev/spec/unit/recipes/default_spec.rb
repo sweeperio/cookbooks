@@ -7,7 +7,7 @@
 require "spec_helper"
 
 describe "dev::default" do
-  RECIPES = %w(postgresql vim zsh)
+  RECIPES = %w(postgresql hub vim zsh)
 
   let(:chef_run) do
     runner = ChefSpec::ServerRunner.new

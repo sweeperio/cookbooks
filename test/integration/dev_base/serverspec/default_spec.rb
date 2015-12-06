@@ -1,7 +1,7 @@
 require "spec_helper"
 
 describe "dev" do
-  APPS     = %w(memcached phantomjs psql redis-server redis-cli tmux fasd node coffee grunt vim)
+  APPS     = %w(memcached phantomjs psql redis-server redis-cli tmux fasd node coffee grunt vim hub)
   SERVICES = %w(memcached postgresql redis6379)
 
   RSpec::Matchers.define :match_key_value do |key, value|
