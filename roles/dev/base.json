@@ -9,6 +9,7 @@
     "recipe[sudo]",
     "recipe[memcached]",
     "recipe[nodejs]",
+    "recipe[phantomjs]",
     "recipe[redisio]",
     "recipe[redisio::enable]",
     "recipe[tmux]",
