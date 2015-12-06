@@ -7,7 +7,7 @@
 require "spec_helper"
 
 describe "dev::default" do
-  RECIPES = %w(postgresql)
+  RECIPES = %w(postgresql zsh)
 
   let(:chef_run) do
     runner = ChefSpec::ServerRunner.new
@@ -18,5 +18,9 @@ describe "dev::default" do
     RECIPES.each do |recipe|
       expect(chef_run).to include_recipe("dev::#{recipe}")
     end
+  end
+
+  it "sets the default shell for the vagrant user" do
+    expect(chef_run).to run_execute("set default shell")
   end
 end

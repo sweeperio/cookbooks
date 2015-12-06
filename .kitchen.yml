@@ -25,6 +25,8 @@ suites:
     run_list:
       - role[dev--base]
     attributes:
+      dev:
+        shell: zsh
       users: david_muto
       authorization:
         sudo:

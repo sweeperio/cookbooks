@@ -7,3 +7,4 @@ long_description  "Installs/Configures dev machines"
 version           "0.1.0"
 
 depends "postgresql"
+depends "zsh"

@@ -23,6 +23,10 @@ describe "dev" do
     end
   end
 
+  describe command("grep \"^vagrant\" /etc/passwd | cut -d ':' -f 7") do
+    its(:stdout) { should eq("/usr/bin/zsh\n") }
+  end
+
   context "postgresl" do
     describe command("sudo -i psql -V") do
       its(:stdout) { should contain("9.3.10") }
