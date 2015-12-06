@@ -1,7 +1,7 @@
 require "spec_helper"
 
 describe "dev" do
-  APPS     = %w(memcached phantomjs psql redis-server redis-cli tmux fasd node coffee grunt)
+  APPS     = %w(memcached phantomjs psql redis-server redis-cli tmux fasd node coffee grunt vim)
   SERVICES = %w(memcached postgresql redis6379)
 
   RSpec::Matchers.define :match_key_value do |key, value|
@@ -25,6 +25,10 @@ describe "dev" do
 
   describe command("grep \"^vagrant\" /etc/passwd | cut -d ':' -f 7") do
     its(:stdout) { should eq("/usr/bin/zsh\n") }
+  end
+
+  describe command("vim --version") do
+    its(:stdout) { should match(/\+ruby/) }
   end
 
   context "postgresl" do
