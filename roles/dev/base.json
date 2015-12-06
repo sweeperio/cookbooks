@@ -9,7 +9,8 @@
     "recipe[sudo]",
     "recipe[redisio]",
     "recipe[redisio::enable]",
-    "recipe[tmux]"
+    "recipe[tmux]",
+    "recipe[fasd]"
   ],
   "default_attributes": {
     "authorization": {
