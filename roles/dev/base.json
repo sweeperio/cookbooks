@@ -7,6 +7,7 @@
     "recipe[user::data_bag]",
     "recipe[base]",
     "recipe[sudo]",
+    "recipe[golang::packages]",
     "recipe[memcached]",
     "recipe[nodejs]",
     "recipe[phantomjs]",
@@ -31,6 +32,12 @@
         "2.2.3": true
       },
       "default": "2.2.3"
+    },
+    "go": {
+      "owner": "vagrant",
+      "group": "vagrant",
+      "gopath": "/home/vagrant/go",
+      "packages": ["launchpad.net/gocheck", "github.com/tools/godep"]
     },
     "memcached": {
       "listen": "127.0.0.1"
