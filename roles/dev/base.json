@@ -21,6 +21,7 @@
   "default_attributes": {
     "authorization": {
       "sudo": {
+        "users": ["vagrant"],
         "groups": ["sudoers"],
         "passwordless": true
       }
