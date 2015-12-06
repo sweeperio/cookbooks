@@ -6,6 +6,7 @@
   "run_list": [
     "recipe[user::data_bag]",
     "recipe[base]",
+    "recipe[dev]",
     "recipe[sudo]",
     "recipe[fasd]",
     "recipe[golang::packages]",
