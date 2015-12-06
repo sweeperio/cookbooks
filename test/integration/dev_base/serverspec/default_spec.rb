@@ -6,4 +6,10 @@ describe "dev" do
       its(:stdout) { should_not eq("") }
     end
   end
+
+  %w(node coffee grunt).each do |app|
+    describe command("which #{app}") do
+      its(:stdout) { should_not eq("") }
+    end
+  end
 end

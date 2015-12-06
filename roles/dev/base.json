@@ -8,6 +8,7 @@
     "recipe[base]",
     "recipe[sudo]",
     "recipe[memcached]",
+    "recipe[nodejs]",
     "recipe[redisio]",
     "recipe[redisio::enable]",
     "recipe[tmux]",
@@ -32,6 +33,12 @@
     },
     "memcached": {
       "listen": "127.0.0.1"
+    },
+    "nodejs": {
+      "npm_packages": [
+        { "name": "coffee-script" },
+        { "name": "grunt-cli" }
+      ]
     },
     "tmux": {
       "install_method": "source"
