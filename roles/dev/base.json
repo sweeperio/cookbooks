@@ -7,6 +7,7 @@
     "recipe[user::data_bag]",
     "recipe[base]",
     "recipe[sudo]",
+    "recipe[memcached]",
     "recipe[redisio]",
     "recipe[redisio::enable]",
     "recipe[tmux]",
@@ -28,6 +29,9 @@
         "2.2.3": true
       },
       "default": "2.2.3"
+    },
+    "memcached": {
+      "listen": "127.0.0.1"
     },
     "tmux": {
       "install_method": "source"
