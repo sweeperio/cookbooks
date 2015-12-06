@@ -6,7 +6,9 @@
   "run_list": [
     "recipe[user::data_bag]",
     "recipe[base]",
-    "recipe[sudo]"
+    "recipe[sudo]",
+    "recipe[redisio]",
+    "recipe[redisio::enable]"
   ],
   "default_attributes": {
     "authorization": {
