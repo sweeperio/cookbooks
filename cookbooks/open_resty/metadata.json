@@ -1,0 +1,42 @@
+{
+  "name": "open_resty",
+  "description": "Installs/Configures open_resty",
+  "long_description": "Installs/Configures open_resty",
+  "maintainer": "pseudomuto",
+  "maintainer_email": "david.muto@gmail.com",
+  "license": "all_rights",
+  "platforms": {
+
+  },
+  "dependencies": {
+    "apt": ">= 0.0.0",
+    "ark": ">= 0.0.0"
+  },
+  "recommendations": {
+
+  },
+  "suggestions": {
+
+  },
+  "conflicting": {
+
+  },
+  "providing": {
+
+  },
+  "replacing": {
+
+  },
+  "attributes": {
+
+  },
+  "groupings": {
+
+  },
+  "recipes": {
+
+  },
+  "version": "0.1.0",
+  "source_url": "",
+  "issues_url": ""
+}
