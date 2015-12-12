@@ -8,6 +8,7 @@
     "recipe[base]",
     "recipe[dev]",
     "recipe[sudo]",
+    "recipe[runit]",
     "recipe[fasd]",
     "recipe[golang::packages]",
     "recipe[memcached]",
@@ -16,7 +17,8 @@
     "recipe[postgresql::server]",
     "recipe[redisio]",
     "recipe[redisio::enable]",
-    "recipe[tmux]"
+    "recipe[tmux]",
+    "recipe[open_resty]"
   ],
   "default_attributes": {
     "authorization": {
