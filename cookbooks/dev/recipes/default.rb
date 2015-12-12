@@ -8,6 +8,7 @@ include_recipe "dev::postgresql"
 include_recipe "dev::hub"
 include_recipe "dev::vim"
 include_recipe "dev::zsh"
+include_recipe "dev::nginx"
 
 DEFAULT_SHELL = node["dev"]["shell"]
 

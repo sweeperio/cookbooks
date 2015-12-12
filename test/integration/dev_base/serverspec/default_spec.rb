@@ -51,4 +51,18 @@ describe "dev" do
       its(:content) { should match(/^host\s*all\s*all\s*192.168.0.0\/16\s*trust/) }
     end
   end
+
+  context "open resty/nginx" do
+    describe file("/etc/nginx/sites-available/dev-rails-nginx.conf") do
+      it { should exist }
+    end
+
+    describe file("/etc/nginx/sites-enabled/dev-rails-nginx.conf") do
+      it { should exist }
+    end
+
+    describe command("luajit -v") do
+      its(:stdout) { should match(/^LuaJIT 2\.1\.0/) }
+    end
+  end
 end

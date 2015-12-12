@@ -15,7 +15,7 @@ describe "dev::hub" do
   it "arks hub from github" do
     expect(chef_run).to cherry_pick_ark("hub").with(
       path: "/usr/local/bin",
-      creates: "hub-linux-amd64-2.2.2/hub"
+      creates: "hub-linux-amd64-2.2.1/hub"
     )
   end
 end

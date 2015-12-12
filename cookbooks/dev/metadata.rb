@@ -7,5 +7,6 @@ long_description  "Installs/Configures dev machines"
 version           "0.1.0"
 
 depends "ark"
+depends "open_resty"
 depends "postgresql"
 depends "zsh"

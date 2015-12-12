@@ -17,8 +17,7 @@
     "recipe[postgresql::server]",
     "recipe[redisio]",
     "recipe[redisio::enable]",
-    "recipe[tmux]",
-    "recipe[open_resty]"
+    "recipe[tmux]"
   ],
   "default_attributes": {
     "authorization": {
