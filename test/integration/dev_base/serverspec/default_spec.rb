@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe "dev" do
   APPS     = %w(memcached phantomjs psql redis-server redis-cli tmux fasd node coffee grunt vim hub)
-  SERVICES = %w(memcached postgresql redis6379)
+  SERVICES = %w(memcached nginx postgresql redis6379)
 
   RSpec::Matchers.define :match_key_value do |key, value|
     match do |actual|
@@ -49,6 +49,20 @@ describe "dev" do
       its(:content) { should match(/^host\s*all\s*all\s*127.0.0.1\/32\s*md5/) }
       its(:content) { should match(/^host\s*all\s*all\s*::1\/128\s*md5/) }
       its(:content) { should match(/^host\s*all\s*all\s*192.168.0.0\/16\s*trust/) }
+    end
+  end
+
+  context "open resty/nginx" do
+    describe file("/etc/nginx/sites-available/dev-rails-nginx.conf") do
+      it { should exist }
+    end
+
+    describe file("/etc/nginx/sites-enabled/dev-rails-nginx.conf") do
+      it { should exist }
+    end
+
+    describe command("luajit -v") do
+      its(:stdout) { should match(/^LuaJIT 2\.1\.0/) }
     end
   end
 end

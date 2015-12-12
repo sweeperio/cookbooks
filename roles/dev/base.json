@@ -8,6 +8,7 @@
     "recipe[base]",
     "recipe[dev]",
     "recipe[sudo]",
+    "recipe[runit]",
     "recipe[fasd]",
     "recipe[golang::packages]",
     "recipe[memcached]",
