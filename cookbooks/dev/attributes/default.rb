@@ -1,1 +1,0 @@
-default["dev"]["shell"] = "bash"
