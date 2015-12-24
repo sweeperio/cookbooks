@@ -10,40 +10,7 @@ platforms:
   - name: ubuntu-14.04
 
 suites:
-  - name: server_base
+  - name: base
     run_list:
-      - role[server--base]
+      - role[base]
     attributes:
-      packages:
-        - curl
-      chruby:
-        default: 2.2.2
-        rubies:
-          2.2.2: true
-
-  - name: dev_base
-    run_list:
-      - role[dev--base]
-    attributes:
-      apt:
-        compile_time_update: true
-      dev:
-        shell: zsh
-      users: david_muto
-      authorization:
-        sudo:
-          users:
-            - vagrant
-      chruby:
-        default: 2.2.3
-        rubies:
-          2.2.3: true
-
-  - name: apps_dude
-    run_list:
-      - role[apps--dude]
-    attributes:
-      authorization:
-        sudo:
-          users:
-            - vagrant
