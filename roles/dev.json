@@ -1,0 +1,12 @@
+{
+  "name": "dev",
+  "description": "A role for development machines",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "run_list": [
+    "role[base]",
+    "recipe[dev]"
+  ],
+  "default_attributes": {
+  }
+}
