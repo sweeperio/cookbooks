@@ -1,0 +1,16 @@
+{
+  "name": "base",
+  "description": "A common role for all machines",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "run_list": [
+    "recipe[base]"
+  ],
+  "default_attributes": {
+    "chef_client": {
+      "server_url": "https://chef.sweeper.io/organizations/sweeper",
+      "validation_client_name": "sweeper-validator"
+    },
+    "users": ["david_muto"]
+  }
+}
